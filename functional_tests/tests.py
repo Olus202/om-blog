@@ -2,7 +2,7 @@ from django.test import TestCase
 from selenium import webdriver
 
 
-class RunningBlog(TestCase):
+class VisitBlog(TestCase):
 
     def setUp(self):
         self.browser = webdriver.Firefox()
@@ -15,6 +15,6 @@ class RunningBlog(TestCase):
         # Run the page
         self.browser.get('http://127.0.0.1:8000/')
 
-        # Assert if 'Django' in title
-        self.assertIn('Django', self.browser.title)
+        # Check title
+        self.assertIn('outdoor marriage', self.browser.title)
 
