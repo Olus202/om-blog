@@ -16,8 +16,8 @@ class VisitBlog(TestCase):
         # Check title
         self.assertIn('outdoor marriage', self.browser.title)
 
-    def test_parts_of_first_post(self):
-        # Check header, publication date and text of first post
+    def test_content_of_home_page(self):
+        # Check header, publication date and text in home.html
         header = self.browser.find_element_by_id('header').text
         self.assertTrue('First post' == header)
 
