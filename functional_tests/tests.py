@@ -6,14 +6,23 @@ class VisitBlog(TestCase):
 
     def setUp(self):
         self.browser = webdriver.Firefox()
+        self.browser.get('http://127.0.0.1:8000/')
         self.browser.implicitly_wait(3)
 
     def tearDown(self):
         self.browser.quit()
 
     def test_title_of_home_page(self):
-        # Run the page
-        self.browser.get('http://127.0.0.1:8000/')
-
         # Check title
         self.assertIn('outdoor marriage', self.browser.title)
+
+    def test_parts_of_first_post(self):
+        # Check header, publication date and text of first post
+        header = self.browser.find_element_by_id('header').text
+        self.assertTrue('First post' == header)
+
+        pub_date = self.browser.find_element_by_id('pub_date').text
+        self.assertTrue('15.11.2016' == pub_date)
+
+        post_text = self.browser.find_element_by_id('text').text
+        self.assertIn('This is first post', post_text)
