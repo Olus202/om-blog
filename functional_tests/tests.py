@@ -11,10 +11,9 @@ class VisitBlog(TestCase):
     def tearDown(self):
         self.browser.quit()
 
-    def test_run_main(self):
+    def test_title_of_home_page(self):
         # Run the page
         self.browser.get('http://127.0.0.1:8000/')
 
         # Check title
         self.assertIn('outdoor marriage', self.browser.title)
-
