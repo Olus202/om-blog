@@ -1,8 +1,5 @@
-import datetime
 from django.test import TestCase
 from selenium import webdriver
-
-from blog.models import Post
 
 
 class VisitBlog(TestCase):
@@ -21,19 +18,11 @@ class VisitBlog(TestCase):
 
     def test_content_of_home_page(self):
         # Check header, publication date and text in home.html
-        first_post = Post()
-        first_post.text = "This is first post"
-        first_post.pub_date = "2016-11-16"
-        first_post.header = "First post"
-        first_post.save()
-
-        post = Post.objects.all()[0]
-
         header = self.browser.find_element_by_id('header').text
-        self.assertTrue(post.header == header)
+        self.assertTrue('First post' == header)
 
         pub_date = self.browser.find_element_by_id('pub_date').text
-        self.assertTrue(str(post.pub_date) == pub_date)
+        self.assertTrue('Nov. 15, 2016' == pub_date)
 
         post_text = self.browser.find_element_by_id('text').text
-        self.assertIn(post.text, post_text)
+        self.assertIn('This is first post', post_text)

@@ -20,6 +20,16 @@ class HomePageTest(TestCase):
         expected_html = render_to_string('home.html')
         self.assertEqual(response.content.decode(), expected_html)
 
+    def test_home_page_display_posts(self):
+        Post.objects.create(text='This is first post', header='First post', pub_date=datetime.date.today())
+        Post.objects.create(text='This is second post', header='Second post', pub_date=datetime.date.today())
+
+        request = HttpRequest()
+        response = home_page(request)
+
+        self.assertIn('This is first post', response.content.decode())
+        self.assertIn('This is second post', response.content.decode())
+
 
 class PostModelTest(TestCase):
 

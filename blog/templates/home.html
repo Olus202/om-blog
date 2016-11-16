@@ -1,16 +1,15 @@
-<html>
-    <head>
-        <title>outdoor marriage</title>
-    </head>
-    <body>
-        <div id="header">
-            First post
-        </div>
-        <div id="pub_date">
-            2016-11-16
-        </div>
-        <div id="text">
-            This is first post
-        </div>
-    </body>
-</html>
+{% extends "base.html" %}
+    {% block content %}
+        {% for post in posts %}
+            <div id="header">
+                {{ post.header }}
+            </div>
+            <div id="pub_date">
+                {{ post.pub_date }}
+            </div>
+            <div id="text">
+                {{ post.text }}
+            </div>
+        {% endfor %}
+    {% endblock content %}
+
