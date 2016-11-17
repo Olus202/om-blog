@@ -26,3 +26,15 @@ class VisitBlog(TestCase):
 
         post_text = self.browser.find_element_by_id('text').text
         self.assertIn('This is first post', post_text)
+
+    def test_go_to_post_view(self):
+        self.browser.get('http://127.0.0.1:8000/post/1/')
+        contents = self.browser.find_element_by_id('text').text
+        self.assertIn('first post', contents)
+
+        self.browser.get('http://127.0.0.1:8000/post/2/')
+        contents = self.browser.find_element_by_id('text').text
+        self.assertIn('second post', contents)
+
+        self.browser.get('http://127.0.0.1:8000/post/100/')
+        self.assertIn('Page not found', self.browser.title)

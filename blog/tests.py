@@ -47,9 +47,3 @@ class PostModelTest(TestCase):
         self.assertEqual(saved_post.text, 'This is first post')
         self.assertEqual(saved_post.pub_date, datetime.date.today())
         self.assertEqual(saved_post.header, 'First post')
-
-
-
-
-
-
