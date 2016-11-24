@@ -1,0 +1,54 @@
+body
+{
+    background-color: #435B7A;
+    color: #ffffff;
+}
+
+#container
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lato', sans-serif;
+}
+
+#logo
+{
+    font-family: 'Josefin Sans', sans-serif;
+    height: 80px;
+    width:  1000px;
+    text-align: center;
+    padding: 10px
+}
+#menu
+{
+    width: 1000px;
+    text-align: center;
+    padding: 2px;
+}
+
+.button
+{
+    background-color: #ff11ff;
+    height: 30px;
+    width: 150px;
+    float: left;
+}
+
+#posts
+{
+    padding: 5px;
+}
+
+#header
+{
+    margin-top: 20px;
+}
+
+#footer
+{
+    height: 20px;
+    width:  1000px;
+    margin-top: 15px;
+    text-align: center;
+}
