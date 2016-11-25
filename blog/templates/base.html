@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>outdoor marriage</title>
+
     <meta name="description" content="Blog o tematyce górskiej">
     <meta name="keywords" content="góry, wysokie góry, wspinaczka, bouldering, szlaki, mapy, korona gór polskich">
+
     <link type='text/css' rel="stylesheet" href="{% static 'style.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato" rel="stylesheet">
 </head>
@@ -14,25 +16,23 @@
             <h1>outdoor marriage | małżeństwo poza drzwiami</h1>
         </div>
         <div id="menu">
-            <hr/>
-            <div class="button">
-                Ostatnie wpisy
-            </div>
-            <div class="button">
-                Wszytskie wpisy
-            </div>
-            <div class="button">
+            <ol>
+                Ostatnie wpisy   |
+                Wszytskie wpisy   |
                 Korona Gór Polski
+            </ol>
+        </div>
+        <div class="content">
+            <div id="posts">
+                {% block content %}
+                {% endblock content %}
             </div>
-            <div class="button">
-                O mnie
+            <div id="right">
+                <div class="part">
+                    Witam na blogu górskim
+                </div>
             </div>
             <div style="clear: both"></div>
-            <hr/>
-        </div>
-        <div id="posts">
-            {% block content %}
-            {% endblock content %}
         </div>
         <div id="footer">
             Created by Aleksandra Bacik-Polus
