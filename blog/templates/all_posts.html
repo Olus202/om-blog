@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+    {% block content %}
+        {% for post in posts %}
+            <div id="header">
+                <a href="{% url 'post_view' pk=post.pk %}">{{ post.header }}</a>
+            </div>
+            <div id="pub_date">
+                {{ post.pub_date }}
+            </div>
+        {% endfor %}
+    {% endblock content %}
+

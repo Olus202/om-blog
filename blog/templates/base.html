@@ -8,18 +8,20 @@
     <meta name="keywords" content="góry, wysokie góry, wspinaczka, bouldering, szlaki, mapy, korona gór polskich">
 
     <link type='text/css' rel="stylesheet" href="{% static 'style.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/fontello.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans|Raleway|Kaushan Script">
+
 </head>
 <body>
     <div id="container">
         <div id="logo">
-            <h1>outdoor marriage | małżeństwo poza drzwiami</h1>
+            <h1>outdoor marriage blog  |  małżeństwo poza drzwiami</h1>
         </div>
         <div id="menu">
             <ol>
-                Ostatnie wpisy   |
-                Wszytskie wpisy   |
-                Korona Gór Polski
+                <li><a href="{% url 'home' %}">Ostatnie wpisy</a></li>
+                <li><a href="{% url 'all_posts' %}">Wszytskie wpisy</a></li>
+                <li><a href="{% url 'polish_crown' %}">Korona Gór Polski</a></li>
             </ol>
         </div>
         <div class="content">
@@ -30,14 +32,23 @@
             <div id="right">
                 <div class="part">
                     Witam na blogu górskim
+                    <img src="{% static 'photos/photo.jpg' %}" style="width: 50%; height: 50%"></br>
+                </div>
+                <div class="part">
+                    Skontaktuj się ze mną
+                </div>
+                <div class="part">
+                    Polecam
                 </div>
             </div>
             <div style="clear: both"></div>
         </div>
         <div id="footer">
-            Created by Aleksandra Bacik-Polus
+            2016 &copy; Aleksandra Bacik-Polus |<i class="icon-mail-alt"></i> aleksandrabacik@gmail.com
         </div>
     </div>
 
+    <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/sticky.js' %}"></script>
 </body>
 </html>
