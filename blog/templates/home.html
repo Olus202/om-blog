@@ -8,7 +8,7 @@
                 {{ post.pub_date }}
             </div>
             <div id="text">
-                {{ post.text|slice:":400" }}(...)
+                {{ post.text|linebreaksbr|slice:":400" }}(...)
             </div>
         {% endfor %}
     {% endblock content %}

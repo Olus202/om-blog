@@ -56,8 +56,8 @@
 }
  
 .icon-user:before { content: '\e800'; font-size: 50px; margin-top: 15px;} /* '' */
-.icon-mail:before { content: '\e801'; font-size: 50px; margin-top: 15px;} /* '' */
-.icon-globe:before { content: '\e802'; font-size: 50px; margin-top: 15px;} /* '' */
+.icon-mail:before { content: '\e801'; font-size: 20px; margin-top: 5px;, margin-bottom: 5px;} /* '' */
+.icon-globe:before { content: '\e802'; font-size: 20px; margin-top: 5px;} /* '' */
 .icon-newspaper:before { content: '\e803'; font-size: 50px} /* '' */
 .icon-github-circled:before { content: '\f09b'; font-size: 50px} /* '' */
 .icon-mail-alt:before { content: '\f0e0'; font-size: 15px} /* '' */

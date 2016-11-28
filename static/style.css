@@ -14,10 +14,13 @@ body
 
 #logo
 {
+    background-image: url('photos/logopicture.jpg');
+    background-position: left center;
     font-family: 'Amatic SC';
-    height: 80px;
+    text-align: right;
+    height: 350px;
     width:  100%;
-    padding: 10px
+    padding: 10px;
 }
 
 #menu
@@ -39,7 +42,7 @@ body
 
 #posts
 {
-    width: 750px;
+    width: 730px;
     float: left;
 }
 
@@ -50,12 +53,15 @@ body
     border-left: 1px solid #b30000;
     font-family: 'Kaushan Script', coursive;
     text-align: center;
+    padding: 10px;
     float: left;
 }
 
 .part
 {
-    height: 150px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    text-align: justify;
     margin-bottom: 20px;
 }
 
@@ -65,6 +71,7 @@ body
     font-weight: bold;
     font-size: 20px;
     color: #333333;
+    margin-bottom: 20px;
     border-top: 1px solid #b30000;
 }
 
